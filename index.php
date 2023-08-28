@@ -3,10 +3,6 @@ $jsonString = file_get_contents('data.json');
 
 $data = json_decode($jsonString, true);
 
-if ($data === null) {
-    die('Error parsing JSON.');
-}
-
 $quiz = $data['quiz'];
 
 foreach ($quiz as $category => $questions) {
